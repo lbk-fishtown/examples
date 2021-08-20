@@ -1,0 +1,3595 @@
+{
+    "metadata": {
+        "dbt_schema_version": "https://schemas.getdbt.com/dbt/catalog/v1.json",
+        "dbt_version": "0.19.1",
+        "generated_at": "2021-08-20T00:06:28.498605Z",
+        "invocation_id": "0a8832bf-58c7-4b55-870d-1226689d22ed",
+        "env": {
+            "DBT_CLOUD_PROJECT_ID": "12220",
+            "DBT_CLOUD_RUN_ID": "26070193",
+            "DBT_CLOUD_JOB_ID": "12389",
+            "DBT_CLOUD_RUN_REASON": "scheduled",
+            "DBT_CLOUD_RUN_REASON_CATEGORY": "scheduled"
+        }
+    },
+    "nodes": {
+        "model.tpch.stg_tpch_nations": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "STG_TPCH_NATIONS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "NATION_KEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "NATION_KEY",
+                    "comment": null
+                },
+                "NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "NAME",
+                    "comment": null
+                },
+                "REGION_KEY": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "REGION_KEY",
+                    "comment": null
+                },
+                "COMMENT": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.stg_tpch_nations"
+        },
+        "model.tpch.part_suppliers": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "PART_SUPPLIERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "PART_SUPPLIER_KEY": {
+                    "type": "TEXT",
+                    "index": 1,
+                    "name": "PART_SUPPLIER_KEY",
+                    "comment": null
+                },
+                "PART_KEY": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "PART_KEY",
+                    "comment": null
+                },
+                "PART_NAME": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "PART_NAME",
+                    "comment": null
+                },
+                "MANUFACTURER": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "MANUFACTURER",
+                    "comment": null
+                },
+                "BRAND": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "BRAND",
+                    "comment": null
+                },
+                "PART_TYPE": {
+                    "type": "TEXT",
+                    "index": 6,
+                    "name": "PART_TYPE",
+                    "comment": null
+                },
+                "PART_SIZE": {
+                    "type": "NUMBER",
+                    "index": 7,
+                    "name": "PART_SIZE",
+                    "comment": null
+                },
+                "CONTAINER": {
+                    "type": "TEXT",
+                    "index": 8,
+                    "name": "CONTAINER",
+                    "comment": null
+                },
+                "RETAIL_PRICE": {
+                    "type": "NUMBER",
+                    "index": 9,
+                    "name": "RETAIL_PRICE",
+                    "comment": null
+                },
+                "SUPPLIER_KEY": {
+                    "type": "NUMBER",
+                    "index": 10,
+                    "name": "SUPPLIER_KEY",
+                    "comment": null
+                },
+                "SUPPLIER_NAME": {
+                    "type": "TEXT",
+                    "index": 11,
+                    "name": "SUPPLIER_NAME",
+                    "comment": null
+                },
+                "SUPPLIER_ADDRESS": {
+                    "type": "TEXT",
+                    "index": 12,
+                    "name": "SUPPLIER_ADDRESS",
+                    "comment": null
+                },
+                "PHONE_NUMBER": {
+                    "type": "TEXT",
+                    "index": 13,
+                    "name": "PHONE_NUMBER",
+                    "comment": null
+                },
+                "ACCOUNT_BALANCE": {
+                    "type": "NUMBER",
+                    "index": 14,
+                    "name": "ACCOUNT_BALANCE",
+                    "comment": null
+                },
+                "NATION_KEY": {
+                    "type": "NUMBER",
+                    "index": 15,
+                    "name": "NATION_KEY",
+                    "comment": null
+                },
+                "AVAILABLE_QUANTITY": {
+                    "type": "NUMBER",
+                    "index": 16,
+                    "name": "AVAILABLE_QUANTITY",
+                    "comment": null
+                },
+                "COST": {
+                    "type": "NUMBER",
+                    "index": 17,
+                    "name": "COST",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.part_suppliers"
+        },
+        "model.snowflake_spend.snowflake_warehouse_metering": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "SNOWFLAKE_WAREHOUSE_METERING",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "WAREHOUSE_ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "WAREHOUSE_ID",
+                    "comment": null
+                },
+                "WAREHOUSE_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "WAREHOUSE_NAME",
+                    "comment": null
+                },
+                "START_TIME": {
+                    "type": "TIMESTAMP_LTZ",
+                    "index": 3,
+                    "name": "START_TIME",
+                    "comment": null
+                },
+                "END_TIME": {
+                    "type": "TIMESTAMP_LTZ",
+                    "index": 4,
+                    "name": "END_TIME",
+                    "comment": null
+                },
+                "CREDITS_USED": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "CREDITS_USED",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.snowflake_spend.snowflake_warehouse_metering"
+        },
+        "model.snowflake_spend.snowflake_warehouse_metering_xf": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "SNOWFLAKE_WAREHOUSE_METERING_XF",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "WAREHOUSE_ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "WAREHOUSE_ID",
+                    "comment": null
+                },
+                "WAREHOUSE_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "WAREHOUSE_NAME",
+                    "comment": null
+                },
+                "START_TIME": {
+                    "type": "TIMESTAMP_LTZ",
+                    "index": 3,
+                    "name": "START_TIME",
+                    "comment": null
+                },
+                "END_TIME": {
+                    "type": "TIMESTAMP_LTZ",
+                    "index": 4,
+                    "name": "END_TIME",
+                    "comment": null
+                },
+                "USAGE_MONTH": {
+                    "type": "DATE",
+                    "index": 5,
+                    "name": "USAGE_MONTH",
+                    "comment": null
+                },
+                "USAGE_DAY": {
+                    "type": "DATE",
+                    "index": 6,
+                    "name": "USAGE_DAY",
+                    "comment": null
+                },
+                "USAGE_LENGTH": {
+                    "type": "NUMBER",
+                    "index": 7,
+                    "name": "USAGE_LENGTH",
+                    "comment": null
+                },
+                "CREDIT_RATE": {
+                    "type": "NUMBER",
+                    "index": 8,
+                    "name": "CREDIT_RATE",
+                    "comment": null
+                },
+                "DOLLARS_SPENT": {
+                    "type": "NUMBER",
+                    "index": 9,
+                    "name": "DOLLARS_SPENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.snowflake_spend.snowflake_warehouse_metering_xf"
+        },
+        "model.tpch.order_items": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "ORDER_ITEMS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "ORDER_ITEM_KEY": {
+                    "type": "TEXT",
+                    "index": 1,
+                    "name": "ORDER_ITEM_KEY",
+                    "comment": null
+                },
+                "ORDER_KEY": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "ORDER_KEY",
+                    "comment": null
+                },
+                "CUSTOMER_KEY": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "CUSTOMER_KEY",
+                    "comment": null
+                },
+                "PART_KEY": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "PART_KEY",
+                    "comment": null
+                },
+                "SUPPLIER_KEY": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "SUPPLIER_KEY",
+                    "comment": null
+                },
+                "ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 6,
+                    "name": "ORDER_DATE",
+                    "comment": null
+                },
+                "ORDER_STATUS_CODE": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "ORDER_STATUS_CODE",
+                    "comment": null
+                },
+                "RETURN_FLAG": {
+                    "type": "TEXT",
+                    "index": 8,
+                    "name": "RETURN_FLAG",
+                    "comment": null
+                },
+                "LINE_NUMBER": {
+                    "type": "NUMBER",
+                    "index": 9,
+                    "name": "LINE_NUMBER",
+                    "comment": null
+                },
+                "ORDER_ITEM_STATUS_CODE": {
+                    "type": "TEXT",
+                    "index": 10,
+                    "name": "ORDER_ITEM_STATUS_CODE",
+                    "comment": null
+                },
+                "SHIP_DATE": {
+                    "type": "DATE",
+                    "index": 11,
+                    "name": "SHIP_DATE",
+                    "comment": null
+                },
+                "COMMIT_DATE": {
+                    "type": "DATE",
+                    "index": 12,
+                    "name": "COMMIT_DATE",
+                    "comment": null
+                },
+                "RECEIPT_DATE": {
+                    "type": "DATE",
+                    "index": 13,
+                    "name": "RECEIPT_DATE",
+                    "comment": null
+                },
+                "SHIP_MODE": {
+                    "type": "TEXT",
+                    "index": 14,
+                    "name": "SHIP_MODE",
+                    "comment": null
+                },
+                "EXTENDED_PRICE": {
+                    "type": "NUMBER",
+                    "index": 15,
+                    "name": "EXTENDED_PRICE",
+                    "comment": null
+                },
+                "QUANTITY": {
+                    "type": "NUMBER",
+                    "index": 16,
+                    "name": "QUANTITY",
+                    "comment": null
+                },
+                "BASE_PRICE": {
+                    "type": "NUMBER",
+                    "index": 17,
+                    "name": "BASE_PRICE",
+                    "comment": null
+                },
+                "DISCOUNT_PERCENTAGE": {
+                    "type": "NUMBER",
+                    "index": 18,
+                    "name": "DISCOUNT_PERCENTAGE",
+                    "comment": null
+                },
+                "DISCOUNTED_PRICE": {
+                    "type": "NUMBER",
+                    "index": 19,
+                    "name": "DISCOUNTED_PRICE",
+                    "comment": null
+                },
+                "GROSS_ITEM_SALES_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 20,
+                    "name": "GROSS_ITEM_SALES_AMOUNT",
+                    "comment": null
+                },
+                "DISCOUNTED_ITEM_SALES_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 21,
+                    "name": "DISCOUNTED_ITEM_SALES_AMOUNT",
+                    "comment": null
+                },
+                "ITEM_DISCOUNT_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 22,
+                    "name": "ITEM_DISCOUNT_AMOUNT",
+                    "comment": null
+                },
+                "TAX_RATE": {
+                    "type": "NUMBER",
+                    "index": 23,
+                    "name": "TAX_RATE",
+                    "comment": null
+                },
+                "ITEM_TAX_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 24,
+                    "name": "ITEM_TAX_AMOUNT",
+                    "comment": null
+                },
+                "NET_ITEM_SALES_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 25,
+                    "name": "NET_ITEM_SALES_AMOUNT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.order_items"
+        },
+        "model.tpch.stg_tpch_part_suppliers": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "STG_TPCH_PART_SUPPLIERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "PART_SUPPLIER_KEY": {
+                    "type": "TEXT",
+                    "index": 1,
+                    "name": "PART_SUPPLIER_KEY",
+                    "comment": null
+                },
+                "PART_KEY": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "PART_KEY",
+                    "comment": null
+                },
+                "SUPPLIER_KEY": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "SUPPLIER_KEY",
+                    "comment": null
+                },
+                "AVAILABLE_QUANTITY": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "AVAILABLE_QUANTITY",
+                    "comment": null
+                },
+                "COST": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "COST",
+                    "comment": null
+                },
+                "COMMENT": {
+                    "type": "TEXT",
+                    "index": 6,
+                    "name": "COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.stg_tpch_part_suppliers"
+        },
+        "model.tpch.stg_tpch_regions": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "STG_TPCH_REGIONS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "REGION_KEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "REGION_KEY",
+                    "comment": null
+                },
+                "NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "NAME",
+                    "comment": null
+                },
+                "COMMENT": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.stg_tpch_regions"
+        },
+        "model.tpch.materialization_incremental": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "ANALYTICS",
+                "name": "MATERIALIZATION_INCREMENTAL",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "CUSTOMER_KEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "CUSTOMER_KEY",
+                    "comment": null
+                },
+                "NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "NAME",
+                    "comment": null
+                },
+                "ADDRESS": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "ADDRESS",
+                    "comment": null
+                },
+                "NATION_KEY": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "NATION_KEY",
+                    "comment": null
+                },
+                "PHONE_NUMBER": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "PHONE_NUMBER",
+                    "comment": null
+                },
+                "ACCOUNT_BALANCE": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "ACCOUNT_BALANCE",
+                    "comment": null
+                },
+                "MARKET_SEGMENT": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "MARKET_SEGMENT",
+                    "comment": null
+                },
+                "COMMENT": {
+                    "type": "TEXT",
+                    "index": 8,
+                    "name": "COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2021-06-03 19:59UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 1500.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 110080.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.materialization_incremental"
+        },
+        "model.tpch.get_area_of_circle": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "GET_AREA_OF_CIRCLE",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "AREA": {
+                    "type": "FLOAT",
+                    "index": 1,
+                    "name": "AREA",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.get_area_of_circle"
+        },
+        "model.tpch.fct_order_items": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "ANALYTICS",
+                "name": "FCT_ORDER_ITEMS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "ORDER_ITEM_KEY": {
+                    "type": "TEXT",
+                    "index": 1,
+                    "name": "ORDER_ITEM_KEY",
+                    "comment": null
+                },
+                "ORDER_KEY": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "ORDER_KEY",
+                    "comment": null
+                },
+                "ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 3,
+                    "name": "ORDER_DATE",
+                    "comment": null
+                },
+                "CUSTOMER_KEY": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "CUSTOMER_KEY",
+                    "comment": null
+                },
+                "PART_KEY": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "PART_KEY",
+                    "comment": null
+                },
+                "SUPPLIER_KEY": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "SUPPLIER_KEY",
+                    "comment": null
+                },
+                "ORDER_ITEM_STATUS_CODE": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "ORDER_ITEM_STATUS_CODE",
+                    "comment": null
+                },
+                "RETURN_FLAG": {
+                    "type": "TEXT",
+                    "index": 8,
+                    "name": "RETURN_FLAG",
+                    "comment": null
+                },
+                "LINE_NUMBER": {
+                    "type": "NUMBER",
+                    "index": 9,
+                    "name": "LINE_NUMBER",
+                    "comment": null
+                },
+                "SHIP_DATE": {
+                    "type": "DATE",
+                    "index": 10,
+                    "name": "SHIP_DATE",
+                    "comment": null
+                },
+                "COMMIT_DATE": {
+                    "type": "DATE",
+                    "index": 11,
+                    "name": "COMMIT_DATE",
+                    "comment": null
+                },
+                "RECEIPT_DATE": {
+                    "type": "DATE",
+                    "index": 12,
+                    "name": "RECEIPT_DATE",
+                    "comment": null
+                },
+                "SHIP_MODE": {
+                    "type": "TEXT",
+                    "index": 13,
+                    "name": "SHIP_MODE",
+                    "comment": null
+                },
+                "SUPPLIER_COST": {
+                    "type": "NUMBER",
+                    "index": 14,
+                    "name": "SUPPLIER_COST",
+                    "comment": null
+                },
+                "BASE_PRICE": {
+                    "type": "NUMBER",
+                    "index": 15,
+                    "name": "BASE_PRICE",
+                    "comment": null
+                },
+                "DISCOUNT_PERCENTAGE": {
+                    "type": "NUMBER",
+                    "index": 16,
+                    "name": "DISCOUNT_PERCENTAGE",
+                    "comment": null
+                },
+                "DISCOUNTED_PRICE": {
+                    "type": "NUMBER",
+                    "index": 17,
+                    "name": "DISCOUNTED_PRICE",
+                    "comment": null
+                },
+                "TAX_RATE": {
+                    "type": "NUMBER",
+                    "index": 18,
+                    "name": "TAX_RATE",
+                    "comment": null
+                },
+                "ORDER_ITEM_COUNT": {
+                    "type": "NUMBER",
+                    "index": 19,
+                    "name": "ORDER_ITEM_COUNT",
+                    "comment": null
+                },
+                "QUANTITY": {
+                    "type": "NUMBER",
+                    "index": 20,
+                    "name": "QUANTITY",
+                    "comment": null
+                },
+                "GROSS_ITEM_SALES_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 21,
+                    "name": "GROSS_ITEM_SALES_AMOUNT",
+                    "comment": null
+                },
+                "DISCOUNTED_ITEM_SALES_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 22,
+                    "name": "DISCOUNTED_ITEM_SALES_AMOUNT",
+                    "comment": null
+                },
+                "ITEM_DISCOUNT_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 23,
+                    "name": "ITEM_DISCOUNT_AMOUNT",
+                    "comment": null
+                },
+                "ITEM_TAX_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 24,
+                    "name": "ITEM_TAX_AMOUNT",
+                    "comment": null
+                },
+                "NET_ITEM_SALES_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 25,
+                    "name": "NET_ITEM_SALES_AMOUNT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2021-08-20 00:05UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 60175.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 3699200.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.fct_order_items"
+        },
+        "model.tpch.dim_parts": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "ANALYTICS",
+                "name": "DIM_PARTS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "PART_KEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "PART_KEY",
+                    "comment": null
+                },
+                "MANUFACTURER": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "MANUFACTURER",
+                    "comment": null
+                },
+                "NAME": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "NAME",
+                    "comment": null
+                },
+                "BRAND": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "BRAND",
+                    "comment": null
+                },
+                "TYPE": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "TYPE",
+                    "comment": null
+                },
+                "SIZE": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "SIZE",
+                    "comment": null
+                },
+                "CONTAINER": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "CONTAINER",
+                    "comment": null
+                },
+                "RETAIL_PRICE": {
+                    "type": "NUMBER",
+                    "index": 8,
+                    "name": "RETAIL_PRICE",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2021-08-20 00:05UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 2000.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 58368.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.dim_parts"
+        },
+        "model.tpch.all_days": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "ALL_DAYS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "DATE_DAY": {
+                    "type": "DATE",
+                    "index": 1,
+                    "name": "DATE_DAY",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.all_days"
+        },
+        "model.tpch.agg_ship_modes_dynamic_pivot": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "AGG_SHIP_MODES_DYNAMIC_PIVOT",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "ORDER_YEAR": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "ORDER_YEAR",
+                    "comment": null
+                },
+                "REG_AIR_amount": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "REG_AIR_amount",
+                    "comment": null
+                },
+                "FOB_amount": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "FOB_amount",
+                    "comment": null
+                },
+                "AIR_amount": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "AIR_amount",
+                    "comment": null
+                },
+                "SHIP_amount": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "SHIP_amount",
+                    "comment": null
+                },
+                "RAIL_amount": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "RAIL_amount",
+                    "comment": null
+                },
+                "TRUCK_amount": {
+                    "type": "NUMBER",
+                    "index": 7,
+                    "name": "TRUCK_amount",
+                    "comment": null
+                },
+                "MAIL_amount": {
+                    "type": "NUMBER",
+                    "index": 8,
+                    "name": "MAIL_amount",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.agg_ship_modes_dynamic_pivot"
+        },
+        "model.tpch.stg_tpch_line_items": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "STG_TPCH_LINE_ITEMS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "ORDER_ITEM_KEY": {
+                    "type": "TEXT",
+                    "index": 1,
+                    "name": "ORDER_ITEM_KEY",
+                    "comment": null
+                },
+                "ORDER_KEY": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "ORDER_KEY",
+                    "comment": null
+                },
+                "PART_KEY": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "PART_KEY",
+                    "comment": null
+                },
+                "SUPPLIER_KEY": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "SUPPLIER_KEY",
+                    "comment": null
+                },
+                "LINE_NUMBER": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "LINE_NUMBER",
+                    "comment": null
+                },
+                "QUANTITY": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "QUANTITY",
+                    "comment": null
+                },
+                "EXTENDED_PRICE": {
+                    "type": "NUMBER",
+                    "index": 7,
+                    "name": "EXTENDED_PRICE",
+                    "comment": null
+                },
+                "DISCOUNT_PERCENTAGE": {
+                    "type": "NUMBER",
+                    "index": 8,
+                    "name": "DISCOUNT_PERCENTAGE",
+                    "comment": null
+                },
+                "TAX_RATE": {
+                    "type": "NUMBER",
+                    "index": 9,
+                    "name": "TAX_RATE",
+                    "comment": null
+                },
+                "RETURN_FLAG": {
+                    "type": "TEXT",
+                    "index": 10,
+                    "name": "RETURN_FLAG",
+                    "comment": null
+                },
+                "STATUS_CODE": {
+                    "type": "TEXT",
+                    "index": 11,
+                    "name": "STATUS_CODE",
+                    "comment": null
+                },
+                "SHIP_DATE": {
+                    "type": "DATE",
+                    "index": 12,
+                    "name": "SHIP_DATE",
+                    "comment": null
+                },
+                "COMMIT_DATE": {
+                    "type": "DATE",
+                    "index": 13,
+                    "name": "COMMIT_DATE",
+                    "comment": null
+                },
+                "RECEIPT_DATE": {
+                    "type": "DATE",
+                    "index": 14,
+                    "name": "RECEIPT_DATE",
+                    "comment": null
+                },
+                "SHIP_INSTRUCTIONS": {
+                    "type": "TEXT",
+                    "index": 15,
+                    "name": "SHIP_INSTRUCTIONS",
+                    "comment": null
+                },
+                "SHIP_MODE": {
+                    "type": "TEXT",
+                    "index": 16,
+                    "name": "SHIP_MODE",
+                    "comment": null
+                },
+                "COMMENT": {
+                    "type": "TEXT",
+                    "index": 17,
+                    "name": "COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.stg_tpch_line_items"
+        },
+        "seed.tpch.snowflake_contract_rates": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "ANALYTICS",
+                "name": "SNOWFLAKE_CONTRACT_RATES",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "EFFECTIVE_DATE": {
+                    "type": "DATE",
+                    "index": 1,
+                    "name": "EFFECTIVE_DATE",
+                    "comment": null
+                },
+                "RATE": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "RATE",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2021-08-20 00:04UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 2.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 1024.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "seed.tpch.snowflake_contract_rates"
+        },
+        "model.snowflake_spend.snowflake_query_history": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "ANALYTICS",
+                "name": "SNOWFLAKE_QUERY_HISTORY",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "SNOWFLAKE_QUERY_ID": {
+                    "type": "TEXT",
+                    "index": 1,
+                    "name": "SNOWFLAKE_QUERY_ID",
+                    "comment": null
+                },
+                "DATABASE_ID": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "DATABASE_ID",
+                    "comment": null
+                },
+                "SCHEMA_ID": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "SCHEMA_ID",
+                    "comment": null
+                },
+                "SNOWFLAKE_SESSION_ID": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "SNOWFLAKE_SESSION_ID",
+                    "comment": null
+                },
+                "WAREHOUSE_ID": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "WAREHOUSE_ID",
+                    "comment": null
+                },
+                "DATABASE_NAME": {
+                    "type": "TEXT",
+                    "index": 6,
+                    "name": "DATABASE_NAME",
+                    "comment": null
+                },
+                "QUERY_TEXT": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "QUERY_TEXT",
+                    "comment": null
+                },
+                "SNOWFLAKE_ROLE_NAME": {
+                    "type": "TEXT",
+                    "index": 8,
+                    "name": "SNOWFLAKE_ROLE_NAME",
+                    "comment": null
+                },
+                "QUERY_RESULT_ROWS_PRODUCED": {
+                    "type": "NUMBER",
+                    "index": 9,
+                    "name": "QUERY_RESULT_ROWS_PRODUCED",
+                    "comment": null
+                },
+                "SCHEMA_NAME": {
+                    "type": "TEXT",
+                    "index": 10,
+                    "name": "SCHEMA_NAME",
+                    "comment": null
+                },
+                "SNOWFLAKE_USER_NAME": {
+                    "type": "TEXT",
+                    "index": 11,
+                    "name": "SNOWFLAKE_USER_NAME",
+                    "comment": null
+                },
+                "WAREHOUSE_NAME": {
+                    "type": "TEXT",
+                    "index": 12,
+                    "name": "WAREHOUSE_NAME",
+                    "comment": null
+                },
+                "QUERY_END_TIME": {
+                    "type": "TIMESTAMP_LTZ",
+                    "index": 13,
+                    "name": "QUERY_END_TIME",
+                    "comment": null
+                },
+                "QUERY_START_TIME": {
+                    "type": "TIMESTAMP_LTZ",
+                    "index": 14,
+                    "name": "QUERY_START_TIME",
+                    "comment": null
+                },
+                "QUERY_BYTES_SPILLOVER_LOCAL": {
+                    "type": "NUMBER",
+                    "index": 15,
+                    "name": "QUERY_BYTES_SPILLOVER_LOCAL",
+                    "comment": null
+                },
+                "QUERY_BYTES_SPILLOVER_REMOTE": {
+                    "type": "NUMBER",
+                    "index": 16,
+                    "name": "QUERY_BYTES_SPILLOVER_REMOTE",
+                    "comment": null
+                },
+                "QUERY_BYTES_SCANNED": {
+                    "type": "NUMBER",
+                    "index": 17,
+                    "name": "QUERY_BYTES_SCANNED",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2021-08-20 00:05UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 5763896.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 355182592.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.snowflake_spend.snowflake_query_history"
+        },
+        "model.tpch.stg_tpch_customers": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "STG_TPCH_CUSTOMERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "CUSTOMER_KEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "CUSTOMER_KEY",
+                    "comment": null
+                },
+                "NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "NAME",
+                    "comment": null
+                },
+                "ADDRESS": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "ADDRESS",
+                    "comment": null
+                },
+                "NATION_KEY": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "NATION_KEY",
+                    "comment": null
+                },
+                "PHONE_NUMBER": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "PHONE_NUMBER",
+                    "comment": null
+                },
+                "ACCOUNT_BALANCE": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "ACCOUNT_BALANCE",
+                    "comment": null
+                },
+                "MARKET_SEGMENT": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "MARKET_SEGMENT",
+                    "comment": null
+                },
+                "COMMENT": {
+                    "type": "TEXT",
+                    "index": 8,
+                    "name": "COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.stg_tpch_customers"
+        },
+        "model.snowflake_spend.snowflake_amortized_rates": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "SNOWFLAKE_AMORTIZED_RATES",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "EFFECTIVE_START_DATE": {
+                    "type": "DATE",
+                    "index": 1,
+                    "name": "EFFECTIVE_START_DATE",
+                    "comment": null
+                },
+                "EFFECTIVE_END_DATE": {
+                    "type": "DATE",
+                    "index": 2,
+                    "name": "EFFECTIVE_END_DATE",
+                    "comment": null
+                },
+                "RATE": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "RATE",
+                    "comment": null
+                },
+                "DATE_DAY": {
+                    "type": "DATE",
+                    "index": 4,
+                    "name": "DATE_DAY",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.snowflake_spend.snowflake_amortized_rates"
+        },
+        "model.tpch.stg_tpch_orders": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "STG_TPCH_ORDERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "ORDER_KEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "ORDER_KEY",
+                    "comment": null
+                },
+                "CUSTOMER_KEY": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "CUSTOMER_KEY",
+                    "comment": null
+                },
+                "STATUS_CODE": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "STATUS_CODE",
+                    "comment": null
+                },
+                "TOTAL_PRICE": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "TOTAL_PRICE",
+                    "comment": null
+                },
+                "ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 5,
+                    "name": "ORDER_DATE",
+                    "comment": null
+                },
+                "PRIORITY_CODE": {
+                    "type": "TEXT",
+                    "index": 6,
+                    "name": "PRIORITY_CODE",
+                    "comment": null
+                },
+                "CLERK_NAME": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "CLERK_NAME",
+                    "comment": null
+                },
+                "SHIP_PRIORITY": {
+                    "type": "NUMBER",
+                    "index": 8,
+                    "name": "SHIP_PRIORITY",
+                    "comment": null
+                },
+                "COMMENT": {
+                    "type": "TEXT",
+                    "index": 9,
+                    "name": "COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.stg_tpch_orders"
+        },
+        "model.tpch.stg_tpch_parts": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "STG_TPCH_PARTS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "PART_KEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "PART_KEY",
+                    "comment": null
+                },
+                "NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "NAME",
+                    "comment": null
+                },
+                "MANUFACTURER": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "MANUFACTURER",
+                    "comment": null
+                },
+                "BRAND": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "BRAND",
+                    "comment": null
+                },
+                "TYPE": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "TYPE",
+                    "comment": null
+                },
+                "SIZE": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "SIZE",
+                    "comment": null
+                },
+                "CONTAINER": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "CONTAINER",
+                    "comment": null
+                },
+                "RETAIL_PRICE": {
+                    "type": "NUMBER",
+                    "index": 8,
+                    "name": "RETAIL_PRICE",
+                    "comment": null
+                },
+                "COMMENT": {
+                    "type": "TEXT",
+                    "index": 9,
+                    "name": "COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.stg_tpch_parts"
+        },
+        "model.tpch.stg_tpch_suppliers": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "STG_TPCH_SUPPLIERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "SUPPLIER_KEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "SUPPLIER_KEY",
+                    "comment": null
+                },
+                "SUPPLIER_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "SUPPLIER_NAME",
+                    "comment": null
+                },
+                "SUPPLIER_ADDRESS": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "SUPPLIER_ADDRESS",
+                    "comment": null
+                },
+                "NATION_KEY": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "NATION_KEY",
+                    "comment": null
+                },
+                "PHONE_NUMBER": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "PHONE_NUMBER",
+                    "comment": null
+                },
+                "ACCOUNT_BALANCE": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "ACCOUNT_BALANCE",
+                    "comment": null
+                },
+                "COMMENT": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.stg_tpch_suppliers"
+        },
+        "model.tpch.use_variables": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "USE_VARIABLES",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "ORDER_ITEM_KEY": {
+                    "type": "TEXT",
+                    "index": 1,
+                    "name": "ORDER_ITEM_KEY",
+                    "comment": null
+                },
+                "ORDER_KEY": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "ORDER_KEY",
+                    "comment": null
+                },
+                "ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 3,
+                    "name": "ORDER_DATE",
+                    "comment": null
+                },
+                "CUSTOMER_KEY": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "CUSTOMER_KEY",
+                    "comment": null
+                },
+                "PART_KEY": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "PART_KEY",
+                    "comment": null
+                },
+                "SUPPLIER_KEY": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "SUPPLIER_KEY",
+                    "comment": null
+                },
+                "ORDER_ITEM_STATUS_CODE": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "ORDER_ITEM_STATUS_CODE",
+                    "comment": null
+                },
+                "RETURN_FLAG": {
+                    "type": "TEXT",
+                    "index": 8,
+                    "name": "RETURN_FLAG",
+                    "comment": null
+                },
+                "LINE_NUMBER": {
+                    "type": "NUMBER",
+                    "index": 9,
+                    "name": "LINE_NUMBER",
+                    "comment": null
+                },
+                "SHIP_DATE": {
+                    "type": "DATE",
+                    "index": 10,
+                    "name": "SHIP_DATE",
+                    "comment": null
+                },
+                "COMMIT_DATE": {
+                    "type": "DATE",
+                    "index": 11,
+                    "name": "COMMIT_DATE",
+                    "comment": null
+                },
+                "RECEIPT_DATE": {
+                    "type": "DATE",
+                    "index": 12,
+                    "name": "RECEIPT_DATE",
+                    "comment": null
+                },
+                "SHIP_MODE": {
+                    "type": "TEXT",
+                    "index": 13,
+                    "name": "SHIP_MODE",
+                    "comment": null
+                },
+                "SUPPLIER_COST": {
+                    "type": "NUMBER",
+                    "index": 14,
+                    "name": "SUPPLIER_COST",
+                    "comment": null
+                },
+                "BASE_PRICE": {
+                    "type": "NUMBER",
+                    "index": 15,
+                    "name": "BASE_PRICE",
+                    "comment": null
+                },
+                "DISCOUNT_PERCENTAGE": {
+                    "type": "NUMBER",
+                    "index": 16,
+                    "name": "DISCOUNT_PERCENTAGE",
+                    "comment": null
+                },
+                "DISCOUNTED_PRICE": {
+                    "type": "NUMBER",
+                    "index": 17,
+                    "name": "DISCOUNTED_PRICE",
+                    "comment": null
+                },
+                "TAX_RATE": {
+                    "type": "NUMBER",
+                    "index": 18,
+                    "name": "TAX_RATE",
+                    "comment": null
+                },
+                "ORDER_ITEM_COUNT": {
+                    "type": "NUMBER",
+                    "index": 19,
+                    "name": "ORDER_ITEM_COUNT",
+                    "comment": null
+                },
+                "QUANTITY": {
+                    "type": "NUMBER",
+                    "index": 20,
+                    "name": "QUANTITY",
+                    "comment": null
+                },
+                "GROSS_ITEM_SALES_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 21,
+                    "name": "GROSS_ITEM_SALES_AMOUNT",
+                    "comment": null
+                },
+                "DISCOUNTED_ITEM_SALES_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 22,
+                    "name": "DISCOUNTED_ITEM_SALES_AMOUNT",
+                    "comment": null
+                },
+                "ITEM_DISCOUNT_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 23,
+                    "name": "ITEM_DISCOUNT_AMOUNT",
+                    "comment": null
+                },
+                "ITEM_TAX_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 24,
+                    "name": "ITEM_TAX_AMOUNT",
+                    "comment": null
+                },
+                "NET_ITEM_SALES_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 25,
+                    "name": "NET_ITEM_SALES_AMOUNT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.use_variables"
+        },
+        "model.tpch.agg_ship_modes_hardcoded_pivot": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ANALYTICS",
+                "name": "AGG_SHIP_MODES_HARDCODED_PIVOT",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "ORDER_YEAR": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "ORDER_YEAR",
+                    "comment": null
+                },
+                "'AIR'": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "'AIR'",
+                    "comment": null
+                },
+                "'REG AIR'": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "'REG AIR'",
+                    "comment": null
+                },
+                "'FOB'": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "'FOB'",
+                    "comment": null
+                },
+                "'RAIL'": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "'RAIL'",
+                    "comment": null
+                },
+                "'MAIL'": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "'MAIL'",
+                    "comment": null
+                },
+                "'SHIP'": {
+                    "type": "NUMBER",
+                    "index": 7,
+                    "name": "'SHIP'",
+                    "comment": null
+                },
+                "'TRUCK'": {
+                    "type": "NUMBER",
+                    "index": 8,
+                    "name": "'TRUCK'",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.agg_ship_modes_hardcoded_pivot"
+        },
+        "model.tpch.dim_customers": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "ANALYTICS",
+                "name": "DIM_CUSTOMERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "CUSTOMER_KEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "CUSTOMER_KEY",
+                    "comment": null
+                },
+                "NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "NAME",
+                    "comment": null
+                },
+                "ADDRESS": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "ADDRESS",
+                    "comment": null
+                },
+                "NATION": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "NATION",
+                    "comment": null
+                },
+                "REGION": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "REGION",
+                    "comment": null
+                },
+                "PHONE_NUMBER": {
+                    "type": "TEXT",
+                    "index": 6,
+                    "name": "PHONE_NUMBER",
+                    "comment": null
+                },
+                "ACCOUNT_BALANCE": {
+                    "type": "NUMBER",
+                    "index": 7,
+                    "name": "ACCOUNT_BALANCE",
+                    "comment": null
+                },
+                "MARKET_SEGMENT": {
+                    "type": "TEXT",
+                    "index": 8,
+                    "name": "MARKET_SEGMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2021-08-20 00:05UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 1500.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 80384.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.dim_customers"
+        },
+        "model.tpch.dim_suppliers": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "ANALYTICS",
+                "name": "DIM_SUPPLIERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "SUPPLIER_KEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "SUPPLIER_KEY",
+                    "comment": null
+                },
+                "SUPPLIER_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "SUPPLIER_NAME",
+                    "comment": null
+                },
+                "SUPPLIER_ADDRESS": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "SUPPLIER_ADDRESS",
+                    "comment": null
+                },
+                "NATION": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "NATION",
+                    "comment": null
+                },
+                "REGION": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "REGION",
+                    "comment": null
+                },
+                "PHONE_NUMBER": {
+                    "type": "TEXT",
+                    "index": 6,
+                    "name": "PHONE_NUMBER",
+                    "comment": null
+                },
+                "ACCOUNT_BALANCE": {
+                    "type": "NUMBER",
+                    "index": 7,
+                    "name": "ACCOUNT_BALANCE",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2021-08-20 00:05UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 100.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 8192.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.dim_suppliers"
+        },
+        "model.tpch.fct_orders": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "ANALYTICS",
+                "name": "FCT_ORDERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "ORDER_KEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "ORDER_KEY",
+                    "comment": null
+                },
+                "ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 2,
+                    "name": "ORDER_DATE",
+                    "comment": null
+                },
+                "CUSTOMER_KEY": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "CUSTOMER_KEY",
+                    "comment": null
+                },
+                "STATUS_CODE": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "STATUS_CODE",
+                    "comment": null
+                },
+                "PRIORITY_CODE": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "PRIORITY_CODE",
+                    "comment": null
+                },
+                "CLERK_NAME": {
+                    "type": "TEXT",
+                    "index": 6,
+                    "name": "CLERK_NAME",
+                    "comment": null
+                },
+                "SHIP_PRIORITY": {
+                    "type": "NUMBER",
+                    "index": 7,
+                    "name": "SHIP_PRIORITY",
+                    "comment": null
+                },
+                "ORDER_COUNT": {
+                    "type": "NUMBER",
+                    "index": 8,
+                    "name": "ORDER_COUNT",
+                    "comment": null
+                },
+                "GROSS_ITEM_SALES_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 9,
+                    "name": "GROSS_ITEM_SALES_AMOUNT",
+                    "comment": null
+                },
+                "ITEM_DISCOUNT_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 10,
+                    "name": "ITEM_DISCOUNT_AMOUNT",
+                    "comment": null
+                },
+                "ITEM_TAX_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 11,
+                    "name": "ITEM_TAX_AMOUNT",
+                    "comment": null
+                },
+                "NET_ITEM_SALES_AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 12,
+                    "name": "NET_ITEM_SALES_AMOUNT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2021-08-20 00:05UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 15000.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 263680.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.tpch.fct_orders"
+        }
+    },
+    "sources": {
+        "source.tpch.tpch.customer": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "TPCH_SF001",
+                "name": "CUSTOMER",
+                "database": "RAW",
+                "comment": null,
+                "owner": "ACCOUNTADMIN"
+            },
+            "columns": {
+                "C_CUSTKEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "C_CUSTKEY",
+                    "comment": null
+                },
+                "C_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "C_NAME",
+                    "comment": null
+                },
+                "C_ADDRESS": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "C_ADDRESS",
+                    "comment": null
+                },
+                "C_NATIONKEY": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "C_NATIONKEY",
+                    "comment": null
+                },
+                "C_PHONE": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "C_PHONE",
+                    "comment": null
+                },
+                "C_ACCTBAL": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "C_ACCTBAL",
+                    "comment": null
+                },
+                "C_MKTSEGMENT": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "C_MKTSEGMENT",
+                    "comment": null
+                },
+                "C_COMMENT": {
+                    "type": "TEXT",
+                    "index": 8,
+                    "name": "C_COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2020-07-28 22:23UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 1500.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 108032.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.tpch.tpch.customer"
+        },
+        "source.tpch.tpch.lineitem": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "TPCH_SF001",
+                "name": "LINEITEM",
+                "database": "RAW",
+                "comment": null,
+                "owner": "ACCOUNTADMIN"
+            },
+            "columns": {
+                "L_ORDERKEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "L_ORDERKEY",
+                    "comment": null
+                },
+                "L_PARTKEY": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "L_PARTKEY",
+                    "comment": null
+                },
+                "L_SUPPKEY": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "L_SUPPKEY",
+                    "comment": null
+                },
+                "L_LINENUMBER": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "L_LINENUMBER",
+                    "comment": null
+                },
+                "L_QUANTITY": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "L_QUANTITY",
+                    "comment": null
+                },
+                "L_EXTENDEDPRICE": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "L_EXTENDEDPRICE",
+                    "comment": null
+                },
+                "L_DISCOUNT": {
+                    "type": "NUMBER",
+                    "index": 7,
+                    "name": "L_DISCOUNT",
+                    "comment": null
+                },
+                "L_TAX": {
+                    "type": "NUMBER",
+                    "index": 8,
+                    "name": "L_TAX",
+                    "comment": null
+                },
+                "L_RETURNFLAG": {
+                    "type": "TEXT",
+                    "index": 9,
+                    "name": "L_RETURNFLAG",
+                    "comment": null
+                },
+                "L_LINESTATUS": {
+                    "type": "TEXT",
+                    "index": 10,
+                    "name": "L_LINESTATUS",
+                    "comment": null
+                },
+                "L_SHIPDATE": {
+                    "type": "DATE",
+                    "index": 11,
+                    "name": "L_SHIPDATE",
+                    "comment": null
+                },
+                "L_COMMITDATE": {
+                    "type": "DATE",
+                    "index": 12,
+                    "name": "L_COMMITDATE",
+                    "comment": null
+                },
+                "L_RECEIPTDATE": {
+                    "type": "DATE",
+                    "index": 13,
+                    "name": "L_RECEIPTDATE",
+                    "comment": null
+                },
+                "L_SHIPINSTRUCT": {
+                    "type": "TEXT",
+                    "index": 14,
+                    "name": "L_SHIPINSTRUCT",
+                    "comment": null
+                },
+                "L_SHIPMODE": {
+                    "type": "TEXT",
+                    "index": 15,
+                    "name": "L_SHIPMODE",
+                    "comment": null
+                },
+                "L_COMMENT": {
+                    "type": "TEXT",
+                    "index": 16,
+                    "name": "L_COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2020-07-28 22:31UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 60175.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 1410560.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.tpch.tpch.lineitem"
+        },
+        "source.tpch.tpch.part": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "TPCH_SF001",
+                "name": "PART",
+                "database": "RAW",
+                "comment": null,
+                "owner": "ACCOUNTADMIN"
+            },
+            "columns": {
+                "P_PARTKEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "P_PARTKEY",
+                    "comment": null
+                },
+                "P_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "P_NAME",
+                    "comment": null
+                },
+                "P_MFGR": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "P_MFGR",
+                    "comment": null
+                },
+                "P_BRAND": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "P_BRAND",
+                    "comment": null
+                },
+                "P_TYPE": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "P_TYPE",
+                    "comment": null
+                },
+                "P_SIZE": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "P_SIZE",
+                    "comment": null
+                },
+                "P_CONTAINER": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "P_CONTAINER",
+                    "comment": null
+                },
+                "P_RETAILPRICE": {
+                    "type": "NUMBER",
+                    "index": 8,
+                    "name": "P_RETAILPRICE",
+                    "comment": null
+                },
+                "P_COMMENT": {
+                    "type": "TEXT",
+                    "index": 9,
+                    "name": "P_COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2020-07-28 22:31UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 2000.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 52224.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.tpch.tpch.part"
+        },
+        "source.tpch.tpch.region": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "TPCH_SF001",
+                "name": "REGION",
+                "database": "RAW",
+                "comment": null,
+                "owner": "ACCOUNTADMIN"
+            },
+            "columns": {
+                "R_REGIONKEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "R_REGIONKEY",
+                    "comment": null
+                },
+                "R_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "R_NAME",
+                    "comment": null
+                },
+                "R_COMMENT": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "R_COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2020-07-28 22:32UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 5.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 1536.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.tpch.tpch.region"
+        },
+        "source.tpch.tpch.supplier": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "TPCH_SF001",
+                "name": "SUPPLIER",
+                "database": "RAW",
+                "comment": null,
+                "owner": "ACCOUNTADMIN"
+            },
+            "columns": {
+                "S_SUPPKEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "S_SUPPKEY",
+                    "comment": null
+                },
+                "S_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "S_NAME",
+                    "comment": null
+                },
+                "S_ADDRESS": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "S_ADDRESS",
+                    "comment": null
+                },
+                "S_NATIONKEY": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "S_NATIONKEY",
+                    "comment": null
+                },
+                "S_PHONE": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "S_PHONE",
+                    "comment": null
+                },
+                "S_ACCTBAL": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "S_ACCTBAL",
+                    "comment": null
+                },
+                "S_COMMENT": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "S_COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2020-07-28 22:41UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 100.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 8704.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.tpch.tpch.supplier"
+        },
+        "source.tpch.tpch.nation": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "TPCH_SF001",
+                "name": "NATION",
+                "database": "RAW",
+                "comment": null,
+                "owner": "ACCOUNTADMIN"
+            },
+            "columns": {
+                "N_NATIONKEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "N_NATIONKEY",
+                    "comment": null
+                },
+                "N_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "N_NAME",
+                    "comment": null
+                },
+                "N_REGIONKEY": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "N_REGIONKEY",
+                    "comment": null
+                },
+                "N_COMMENT": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "N_COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2020-07-28 22:31UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 25.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 2048.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.tpch.tpch.nation"
+        },
+        "source.tpch.tpch.orders": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "TPCH_SF001",
+                "name": "ORDERS",
+                "database": "RAW",
+                "comment": null,
+                "owner": "ACCOUNTADMIN"
+            },
+            "columns": {
+                "O_ORDERKEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "O_ORDERKEY",
+                    "comment": null
+                },
+                "O_CUSTKEY": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "O_CUSTKEY",
+                    "comment": null
+                },
+                "O_ORDERSTATUS": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "O_ORDERSTATUS",
+                    "comment": null
+                },
+                "O_TOTALPRICE": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "O_TOTALPRICE",
+                    "comment": null
+                },
+                "O_ORDERDATE": {
+                    "type": "DATE",
+                    "index": 5,
+                    "name": "O_ORDERDATE",
+                    "comment": null
+                },
+                "O_ORDERPRIORITY": {
+                    "type": "TEXT",
+                    "index": 6,
+                    "name": "O_ORDERPRIORITY",
+                    "comment": null
+                },
+                "O_CLERK": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "O_CLERK",
+                    "comment": null
+                },
+                "O_SHIPPRIORITY": {
+                    "type": "NUMBER",
+                    "index": 8,
+                    "name": "O_SHIPPRIORITY",
+                    "comment": null
+                },
+                "O_COMMENT": {
+                    "type": "TEXT",
+                    "index": 9,
+                    "name": "O_COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2020-07-28 22:31UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 15000.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 394752.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.tpch.tpch.orders"
+        },
+        "source.tpch.tpch.partsupp": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "TPCH_SF001",
+                "name": "PARTSUPP",
+                "database": "RAW",
+                "comment": null,
+                "owner": "ACCOUNTADMIN"
+            },
+            "columns": {
+                "PS_PARTKEY": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "PS_PARTKEY",
+                    "comment": null
+                },
+                "PS_SUPPKEY": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "PS_SUPPKEY",
+                    "comment": null
+                },
+                "PS_AVAILQTY": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "PS_AVAILQTY",
+                    "comment": null
+                },
+                "PS_SUPPLYCOST": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "PS_SUPPLYCOST",
+                    "comment": null
+                },
+                "PS_COMMENT": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "PS_COMMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2020-07-28 22:31UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 8000.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 349696.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.tpch.tpch.partsupp"
+        },
+        "source.snowflake_spend.snowflake.warehouse_metering_history": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ACCOUNT_USAGE",
+                "name": "WAREHOUSE_METERING_HISTORY",
+                "database": "SNOWFLAKE",
+                "comment": null,
+                "owner": null
+            },
+            "columns": {
+                "START_TIME": {
+                    "type": "TIMESTAMP_LTZ",
+                    "index": 1,
+                    "name": "START_TIME",
+                    "comment": null
+                },
+                "END_TIME": {
+                    "type": "TIMESTAMP_LTZ",
+                    "index": 2,
+                    "name": "END_TIME",
+                    "comment": null
+                },
+                "WAREHOUSE_ID": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "WAREHOUSE_ID",
+                    "comment": null
+                },
+                "WAREHOUSE_NAME": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "WAREHOUSE_NAME",
+                    "comment": null
+                },
+                "CREDITS_USED": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "CREDITS_USED",
+                    "comment": null
+                },
+                "CREDITS_USED_COMPUTE": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "CREDITS_USED_COMPUTE",
+                    "comment": null
+                },
+                "CREDITS_USED_CLOUD_SERVICES": {
+                    "type": "NUMBER",
+                    "index": 7,
+                    "name": "CREDITS_USED_CLOUD_SERVICES",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.snowflake_spend.snowflake.warehouse_metering_history"
+        },
+        "source.snowflake_spend.snowflake.query_history": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "ACCOUNT_USAGE",
+                "name": "QUERY_HISTORY",
+                "database": "SNOWFLAKE",
+                "comment": null,
+                "owner": null
+            },
+            "columns": {
+                "QUERY_ID": {
+                    "type": "TEXT",
+                    "index": 1,
+                    "name": "QUERY_ID",
+                    "comment": null
+                },
+                "QUERY_TEXT": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "QUERY_TEXT",
+                    "comment": null
+                },
+                "DATABASE_ID": {
+                    "type": "NUMBER",
+                    "index": 3,
+                    "name": "DATABASE_ID",
+                    "comment": null
+                },
+                "DATABASE_NAME": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "DATABASE_NAME",
+                    "comment": null
+                },
+                "SCHEMA_ID": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "SCHEMA_ID",
+                    "comment": null
+                },
+                "SCHEMA_NAME": {
+                    "type": "TEXT",
+                    "index": 6,
+                    "name": "SCHEMA_NAME",
+                    "comment": null
+                },
+                "QUERY_TYPE": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "QUERY_TYPE",
+                    "comment": null
+                },
+                "SESSION_ID": {
+                    "type": "NUMBER",
+                    "index": 8,
+                    "name": "SESSION_ID",
+                    "comment": null
+                },
+                "USER_NAME": {
+                    "type": "TEXT",
+                    "index": 9,
+                    "name": "USER_NAME",
+                    "comment": null
+                },
+                "ROLE_NAME": {
+                    "type": "TEXT",
+                    "index": 10,
+                    "name": "ROLE_NAME",
+                    "comment": null
+                },
+                "WAREHOUSE_ID": {
+                    "type": "NUMBER",
+                    "index": 11,
+                    "name": "WAREHOUSE_ID",
+                    "comment": null
+                },
+                "WAREHOUSE_NAME": {
+                    "type": "TEXT",
+                    "index": 12,
+                    "name": "WAREHOUSE_NAME",
+                    "comment": null
+                },
+                "WAREHOUSE_SIZE": {
+                    "type": "TEXT",
+                    "index": 13,
+                    "name": "WAREHOUSE_SIZE",
+                    "comment": null
+                },
+                "WAREHOUSE_TYPE": {
+                    "type": "TEXT",
+                    "index": 14,
+                    "name": "WAREHOUSE_TYPE",
+                    "comment": null
+                },
+                "CLUSTER_NUMBER": {
+                    "type": "NUMBER",
+                    "index": 15,
+                    "name": "CLUSTER_NUMBER",
+                    "comment": null
+                },
+                "QUERY_TAG": {
+                    "type": "TEXT",
+                    "index": 16,
+                    "name": "QUERY_TAG",
+                    "comment": null
+                },
+                "EXECUTION_STATUS": {
+                    "type": "TEXT",
+                    "index": 17,
+                    "name": "EXECUTION_STATUS",
+                    "comment": null
+                },
+                "ERROR_CODE": {
+                    "type": "TEXT",
+                    "index": 18,
+                    "name": "ERROR_CODE",
+                    "comment": null
+                },
+                "ERROR_MESSAGE": {
+                    "type": "TEXT",
+                    "index": 19,
+                    "name": "ERROR_MESSAGE",
+                    "comment": null
+                },
+                "START_TIME": {
+                    "type": "TIMESTAMP_LTZ",
+                    "index": 20,
+                    "name": "START_TIME",
+                    "comment": null
+                },
+                "END_TIME": {
+                    "type": "TIMESTAMP_LTZ",
+                    "index": 21,
+                    "name": "END_TIME",
+                    "comment": null
+                },
+                "TOTAL_ELAPSED_TIME": {
+                    "type": "NUMBER",
+                    "index": 22,
+                    "name": "TOTAL_ELAPSED_TIME",
+                    "comment": null
+                },
+                "BYTES_SCANNED": {
+                    "type": "NUMBER",
+                    "index": 23,
+                    "name": "BYTES_SCANNED",
+                    "comment": null
+                },
+                "PERCENTAGE_SCANNED_FROM_CACHE": {
+                    "type": "FLOAT",
+                    "index": 24,
+                    "name": "PERCENTAGE_SCANNED_FROM_CACHE",
+                    "comment": null
+                },
+                "BYTES_WRITTEN": {
+                    "type": "NUMBER",
+                    "index": 25,
+                    "name": "BYTES_WRITTEN",
+                    "comment": null
+                },
+                "BYTES_WRITTEN_TO_RESULT": {
+                    "type": "NUMBER",
+                    "index": 26,
+                    "name": "BYTES_WRITTEN_TO_RESULT",
+                    "comment": null
+                },
+                "BYTES_READ_FROM_RESULT": {
+                    "type": "NUMBER",
+                    "index": 27,
+                    "name": "BYTES_READ_FROM_RESULT",
+                    "comment": null
+                },
+                "ROWS_PRODUCED": {
+                    "type": "NUMBER",
+                    "index": 28,
+                    "name": "ROWS_PRODUCED",
+                    "comment": null
+                },
+                "ROWS_INSERTED": {
+                    "type": "NUMBER",
+                    "index": 29,
+                    "name": "ROWS_INSERTED",
+                    "comment": null
+                },
+                "ROWS_UPDATED": {
+                    "type": "NUMBER",
+                    "index": 30,
+                    "name": "ROWS_UPDATED",
+                    "comment": null
+                },
+                "ROWS_DELETED": {
+                    "type": "NUMBER",
+                    "index": 31,
+                    "name": "ROWS_DELETED",
+                    "comment": null
+                },
+                "ROWS_UNLOADED": {
+                    "type": "NUMBER",
+                    "index": 32,
+                    "name": "ROWS_UNLOADED",
+                    "comment": null
+                },
+                "BYTES_DELETED": {
+                    "type": "NUMBER",
+                    "index": 33,
+                    "name": "BYTES_DELETED",
+                    "comment": null
+                },
+                "PARTITIONS_SCANNED": {
+                    "type": "NUMBER",
+                    "index": 34,
+                    "name": "PARTITIONS_SCANNED",
+                    "comment": null
+                },
+                "PARTITIONS_TOTAL": {
+                    "type": "NUMBER",
+                    "index": 35,
+                    "name": "PARTITIONS_TOTAL",
+                    "comment": null
+                },
+                "BYTES_SPILLED_TO_LOCAL_STORAGE": {
+                    "type": "NUMBER",
+                    "index": 36,
+                    "name": "BYTES_SPILLED_TO_LOCAL_STORAGE",
+                    "comment": null
+                },
+                "BYTES_SPILLED_TO_REMOTE_STORAGE": {
+                    "type": "NUMBER",
+                    "index": 37,
+                    "name": "BYTES_SPILLED_TO_REMOTE_STORAGE",
+                    "comment": null
+                },
+                "BYTES_SENT_OVER_THE_NETWORK": {
+                    "type": "NUMBER",
+                    "index": 38,
+                    "name": "BYTES_SENT_OVER_THE_NETWORK",
+                    "comment": null
+                },
+                "COMPILATION_TIME": {
+                    "type": "NUMBER",
+                    "index": 39,
+                    "name": "COMPILATION_TIME",
+                    "comment": null
+                },
+                "EXECUTION_TIME": {
+                    "type": "NUMBER",
+                    "index": 40,
+                    "name": "EXECUTION_TIME",
+                    "comment": null
+                },
+                "QUEUED_PROVISIONING_TIME": {
+                    "type": "NUMBER",
+                    "index": 41,
+                    "name": "QUEUED_PROVISIONING_TIME",
+                    "comment": null
+                },
+                "QUEUED_REPAIR_TIME": {
+                    "type": "NUMBER",
+                    "index": 42,
+                    "name": "QUEUED_REPAIR_TIME",
+                    "comment": null
+                },
+                "QUEUED_OVERLOAD_TIME": {
+                    "type": "NUMBER",
+                    "index": 43,
+                    "name": "QUEUED_OVERLOAD_TIME",
+                    "comment": null
+                },
+                "TRANSACTION_BLOCKED_TIME": {
+                    "type": "NUMBER",
+                    "index": 44,
+                    "name": "TRANSACTION_BLOCKED_TIME",
+                    "comment": null
+                },
+                "OUTBOUND_DATA_TRANSFER_CLOUD": {
+                    "type": "TEXT",
+                    "index": 45,
+                    "name": "OUTBOUND_DATA_TRANSFER_CLOUD",
+                    "comment": null
+                },
+                "OUTBOUND_DATA_TRANSFER_REGION": {
+                    "type": "TEXT",
+                    "index": 46,
+                    "name": "OUTBOUND_DATA_TRANSFER_REGION",
+                    "comment": null
+                },
+                "OUTBOUND_DATA_TRANSFER_BYTES": {
+                    "type": "NUMBER",
+                    "index": 47,
+                    "name": "OUTBOUND_DATA_TRANSFER_BYTES",
+                    "comment": null
+                },
+                "INBOUND_DATA_TRANSFER_CLOUD": {
+                    "type": "TEXT",
+                    "index": 48,
+                    "name": "INBOUND_DATA_TRANSFER_CLOUD",
+                    "comment": null
+                },
+                "INBOUND_DATA_TRANSFER_REGION": {
+                    "type": "TEXT",
+                    "index": 49,
+                    "name": "INBOUND_DATA_TRANSFER_REGION",
+                    "comment": null
+                },
+                "INBOUND_DATA_TRANSFER_BYTES": {
+                    "type": "NUMBER",
+                    "index": 50,
+                    "name": "INBOUND_DATA_TRANSFER_BYTES",
+                    "comment": null
+                },
+                "LIST_EXTERNAL_FILES_TIME": {
+                    "type": "NUMBER",
+                    "index": 51,
+                    "name": "LIST_EXTERNAL_FILES_TIME",
+                    "comment": null
+                },
+                "CREDITS_USED_CLOUD_SERVICES": {
+                    "type": "FLOAT",
+                    "index": 52,
+                    "name": "CREDITS_USED_CLOUD_SERVICES",
+                    "comment": null
+                },
+                "RELEASE_VERSION": {
+                    "type": "TEXT",
+                    "index": 53,
+                    "name": "RELEASE_VERSION",
+                    "comment": null
+                },
+                "EXTERNAL_FUNCTION_TOTAL_INVOCATIONS": {
+                    "type": "NUMBER",
+                    "index": 54,
+                    "name": "EXTERNAL_FUNCTION_TOTAL_INVOCATIONS",
+                    "comment": null
+                },
+                "EXTERNAL_FUNCTION_TOTAL_SENT_ROWS": {
+                    "type": "NUMBER",
+                    "index": 55,
+                    "name": "EXTERNAL_FUNCTION_TOTAL_SENT_ROWS",
+                    "comment": null
+                },
+                "EXTERNAL_FUNCTION_TOTAL_RECEIVED_ROWS": {
+                    "type": "NUMBER",
+                    "index": 56,
+                    "name": "EXTERNAL_FUNCTION_TOTAL_RECEIVED_ROWS",
+                    "comment": null
+                },
+                "EXTERNAL_FUNCTION_TOTAL_SENT_BYTES": {
+                    "type": "NUMBER",
+                    "index": 57,
+                    "name": "EXTERNAL_FUNCTION_TOTAL_SENT_BYTES",
+                    "comment": null
+                },
+                "EXTERNAL_FUNCTION_TOTAL_RECEIVED_BYTES": {
+                    "type": "NUMBER",
+                    "index": 58,
+                    "name": "EXTERNAL_FUNCTION_TOTAL_RECEIVED_BYTES",
+                    "comment": null
+                },
+                "QUERY_LOAD_PERCENT": {
+                    "type": "NUMBER",
+                    "index": 59,
+                    "name": "QUERY_LOAD_PERCENT",
+                    "comment": null
+                },
+                "IS_CLIENT_GENERATED_STATEMENT": {
+                    "type": "BOOLEAN",
+                    "index": 60,
+                    "name": "IS_CLIENT_GENERATED_STATEMENT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.snowflake_spend.snowflake.query_history"
+        },
+        "source.tpch.deutsche_boerse.trading_data": {
+            "metadata": {
+                "type": "EXTERNAL TABLE",
+                "schema": "BOERSE",
+                "name": "TRADING_DATA",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "TRANSFORMER"
+            },
+            "columns": {
+                "VALUE": {
+                    "type": "VARIANT",
+                    "index": 1,
+                    "name": "VALUE",
+                    "comment": "The value of this row"
+                },
+                "SOURCE_FILE_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "SOURCE_FILE_NAME",
+                    "comment": null
+                },
+                "ISIN": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "ISIN",
+                    "comment": null
+                },
+                "MARKETSEGMENT": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "MARKETSEGMENT",
+                    "comment": null
+                },
+                "UNDERLYINGSYMBOL": {
+                    "type": "TEXT",
+                    "index": 5,
+                    "name": "UNDERLYINGSYMBOL",
+                    "comment": null
+                },
+                "UNDERLYINGISIN": {
+                    "type": "TEXT",
+                    "index": 6,
+                    "name": "UNDERLYINGISIN",
+                    "comment": null
+                },
+                "CURRENCY": {
+                    "type": "TEXT",
+                    "index": 7,
+                    "name": "CURRENCY",
+                    "comment": null
+                },
+                "SECURITYTYPE": {
+                    "type": "TEXT",
+                    "index": 8,
+                    "name": "SECURITYTYPE",
+                    "comment": null
+                },
+                "MATURITYDATE": {
+                    "type": "TEXT",
+                    "index": 9,
+                    "name": "MATURITYDATE",
+                    "comment": null
+                },
+                "STRIKEPRICE": {
+                    "type": "NUMBER",
+                    "index": 10,
+                    "name": "STRIKEPRICE",
+                    "comment": null
+                },
+                "PUTORCALL": {
+                    "type": "TEXT",
+                    "index": 11,
+                    "name": "PUTORCALL",
+                    "comment": null
+                },
+                "MLEG": {
+                    "type": "TEXT",
+                    "index": 12,
+                    "name": "MLEG",
+                    "comment": null
+                },
+                "CONTRACTGENERATIONNUMBER": {
+                    "type": "TEXT",
+                    "index": 13,
+                    "name": "CONTRACTGENERATIONNUMBER",
+                    "comment": null
+                },
+                "SECURITYID": {
+                    "type": "TEXT",
+                    "index": 14,
+                    "name": "SECURITYID",
+                    "comment": null
+                },
+                "DATE": {
+                    "type": "DATE",
+                    "index": 15,
+                    "name": "DATE",
+                    "comment": null
+                },
+                "TIME": {
+                    "type": "TEXT",
+                    "index": 16,
+                    "name": "TIME",
+                    "comment": null
+                },
+                "STARTPRICE": {
+                    "type": "NUMBER",
+                    "index": 17,
+                    "name": "STARTPRICE",
+                    "comment": null
+                },
+                "MAXPRICE": {
+                    "type": "NUMBER",
+                    "index": 18,
+                    "name": "MAXPRICE",
+                    "comment": null
+                },
+                "MINPRICE": {
+                    "type": "NUMBER",
+                    "index": 19,
+                    "name": "MINPRICE",
+                    "comment": null
+                },
+                "ENDPRICE": {
+                    "type": "NUMBER",
+                    "index": 20,
+                    "name": "ENDPRICE",
+                    "comment": null
+                },
+                "NUMBEROFCONTRACTS": {
+                    "type": "NUMBER",
+                    "index": 21,
+                    "name": "NUMBEROFCONTRACTS",
+                    "comment": null
+                },
+                "NUMBEROFTRADES": {
+                    "type": "NUMBER",
+                    "index": 22,
+                    "name": "NUMBEROFTRADES",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 5090034.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.tpch.deutsche_boerse.trading_data"
+        }
+    },
+    "errors": null
+}
