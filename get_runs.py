@@ -2,7 +2,6 @@ import requests
 import json
 from requests import api
 from requests.api import head
-import yaml
 import os
 import re
 import enum
